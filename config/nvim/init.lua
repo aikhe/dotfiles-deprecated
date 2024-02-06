@@ -1,0 +1,12 @@
+require('mappings')
+require('options')
+
+require('config.lazy')
+require('config.mason')
+--require('config.tokyonight')
+require('config.telescope')
+--require('config.treesitter')
+require('config.blankline')
+require('config.everforest')
+require('config.lualine')
+require('config.neotree')
