@@ -7,7 +7,7 @@ require("neo-tree").setup({
     },
 
     filesystem = {
-        hijack_netrw_behavior = "open_current",
+        hijack_netrw_behavior = "disabled",
         filtered_items = {
             hide_dotfiles = false,
             hide_gitignored = false,
