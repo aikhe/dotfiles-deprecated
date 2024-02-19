@@ -12,6 +12,7 @@ require("mason-lspconfig").setup {
     ensure_installed = { "pyright" },
     require 'lspconfig'.pyright.setup {},
     require 'lspconfig'.lua_ls.setup {},
+    require 'lspconfig'.emmet_ls.setup {},
 }
 
 local null_ls = require("null-ls")

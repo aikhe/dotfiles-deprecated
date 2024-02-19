@@ -3,7 +3,7 @@ vim.keymap.set('n', '<leader>c', "<cmd>Neotree close<CR>")
 
 require("neo-tree").setup({
     window = {
-        width = 25,
+        width = 34,
     },
 
     filesystem = {
@@ -12,6 +12,9 @@ require("neo-tree").setup({
             hide_dotfiles = false,
             hide_gitignored = false,
         },
+        follow_current_file = {
+            leave_dirs_open = true,
+        }
     },
 
     default_component_configs = {
