@@ -13,14 +13,22 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
     {
-        "williamboman/mason.nvim"
+        "williamboman/mason.nvim",
+        dependencies = {
+            "williamboman/mason-lspconfig.nvim",
+            "neovim/nvim-lspconfig",
+        }
     },
 
-    { "neanias/everforest-nvim",
-        version = false,
-        lazy = false,
-        priority = 1000,
-    },
+    { "nvimtools/none-ls.nvim" },
+
+    { 'projekt0n/github-nvim-theme' },
+
+    -- { "neanias/everforest-nvim",
+    --     version = false,
+    --     lazy = false,
+    --     priority = 1000,
+    -- },
 
     {
         "nvim-treesitter/nvim-treesitter",
@@ -49,8 +57,8 @@ require("lazy").setup({
         }
     },
 
-    { 
-        "lukas-reineke/indent-blankline.nvim", 
+    {
+        "lukas-reineke/indent-blankline.nvim",
         version = "2.20.7"
     }
 })
