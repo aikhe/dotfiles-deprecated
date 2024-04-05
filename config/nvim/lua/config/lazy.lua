@@ -33,13 +33,17 @@ require("lazy").setup({
 
   { "nvimtools/none-ls.nvim" },
 
-  { "hrsh7th/nvim-cmp" },
+  {
+    "hrsh7th/nvim-cmp",
+    dependencies = {
+      'hrsh7th/cmp-buffer',
+      'hrsh7th/cmp-path',
+    },
+  },
 
   {
     "L3MON4D3/LuaSnip",
-    -- follow latest release.
     version = "v2.*", -- Replace <CurrentMajor> by the latest released major (first number of latest release)
-    -- install jsregexp (optional!).
     build = "make install_jsregexp",
     dependencies = {
       "saadparwaiz1/cmp_luasnip",
@@ -50,7 +54,6 @@ require("lazy").setup({
   {
     "windwp/nvim-autopairs",
     event = "InsertEnter",
-    opts = {}, -- this is equalent to setup({}) function
   },
 
   { "projekt0n/github-nvim-theme" },
@@ -76,9 +79,8 @@ require("lazy").setup({
     branch = "v3.x",
     dependencies = {
       "nvim-lua/plenary.nvim",
-      "nvim-tree/nvim-web-devicons", -- not strictly required, but recommended
+      "nvim-tree/nvim-web-devicons",
       "MunifTanjim/nui.nvim",
-      -- "3rd/image.nvim", -- Optional image support in preview window: See `# Preview Mode` for more information
     },
   },
 

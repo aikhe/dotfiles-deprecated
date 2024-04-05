@@ -1,15 +1,15 @@
 require("mason").setup({
-    ui = {
-        icons = {
-            package_installed = "✓",
-            package_pending = "➜",
-            package_uninstalled = "✗",
-        },
+  ui = {
+    icons = {
+      package_installed = "✓",
+      package_pending = "➜",
+      package_uninstalled = "✗",
     },
+  },
 })
 
 require("mason-lspconfig").setup({
-    ensure_installed = { "pyright", "html", "cssls", "tsserver" },
+  ensure_installed = { "pyright", "html", "cssls", "tsserver" },
 })
 
 require("lspconfig").pyright.setup({})
@@ -22,11 +22,11 @@ require("lspconfig").tsserver.setup({})
 local null_ls = require("null-ls")
 
 null_ls.setup({
-    sources = {
-        -- null_ls.builtins.formatting.stylua,
-        null_ls.builtins.formatting.prettier,
-        -- null_ls.builtins.completion.spell,
-    },
+  sources = {
+    -- null_ls.builtins.formatting.stylua,
+    null_ls.builtins.formatting.prettier,
+    -- null_ls.builtins.completion.spell,
+  },
 })
 
 vim.keymap.set("n", "<leader>F", function() vim.lsp.buf.format({ timeout_ms = 10000 }) end, {})
